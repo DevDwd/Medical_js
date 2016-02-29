@@ -11,5 +11,11 @@ router.get('/test',function(req,res,next){
 router.get('/Inscription',function(req,res,next){
   res.render('Inscription', { title: 'Inscription' });
 });
+router.get('/service',function(req,res,next){
+  res.render('service', { title: 'Inscription' });
+});
+router.get('/propos',function(req,res,next){
+  res.render('propos', { title: 'Inscription' });
+});
 module.exports = router;
 
