@@ -20,7 +20,7 @@ html
 
     body#page-top.index
         // Navigation
-        nav.navbar.navbar-default.navbar-fixed-top
+        nav.navbar.navbar-default.navbar-fixed-top(style ='background-color:#1c5680;')
             .container
                 // Brand and toggle get grouped for better mobile display
                 .navbar-header.page-scroll
@@ -29,18 +29,18 @@ html
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand(href='#page-top') Centre Hospitalier de Laval
+                    a.navbar-brand(href='#page-top',style='color:white') Centre Hospitalier de Laval
                 // Collect the nav links, forms, and other content for toggling
                 #bs-example-navbar-collapse-1.collapse.navbar-collapse
                     ul.nav.navbar-nav.navbar-center
                         li.hidden
                             a(href='#page-top')
                         li.page-scroll
-                            a(href='/Inscription') Inscription
+                              a(href='/Inscription',style='color:white')  Inscription
                         li.page-scroll
-                            a(href='/propos') A propos de Nous
+                            a(href='/propos',style='color:white') A propos de Nous
                         li.page-scroll
-                            a(href='/service') Nos Services
+                            a(href='/service',style='color:white') Nos Services
                     ul.nav.navbar-nav.navbar-center
                         background-color:#229922
 
@@ -52,11 +52,12 @@ html
                     .intro-text
                         span.name
                         hr.star-light
-                        span.skills La Medecine - qui gagne - ca sourit
-                .col-md-20
-                    .h3 text
+                        span.skills La Prise en charge - des patients - est notre priorité
+             .row
+                 img(src='/images/pageServiceUrgence.jpg', alt='')
 
-    nav.navbar.navbar-default.navbar-fixed-bottom
+
+    nav.navbar.navbar-default.navbar-fixed-bottom(style='background:#E6E6FA;')
         .container
             // Brand and toggle get grouped for better mobile display
             .navbar-header.page-scroll
@@ -78,7 +79,7 @@ html
                                    .row
                                        .footer-col.col-md-4
                                            h6
-                                               p
+                                               p(font-style='italic',style='color:black')
                                                    | Location
                                                    br
                                                    | 130, rue Lafayette
@@ -88,12 +89,12 @@ html
                                                P
                                                    | Adresse Mail:
                                                    br
-                                                   a(href='mailto:webmaster@example.com')  contact@centrehospitalierlaval.com
+                                                   a(href='mailto:webmaster@example.com',style='color:black',font-style='italic')  contact@centrehospitalierlaval.com
                                                    | .
 
 
                                        .footer-col.col-md-4
-                                           h3 Vous pourrez aussi nous suivre sur
+                                           h3(style='color:black') Vous pourrez aussi nous suivre sur
                                            ul.list-inline
                                                li
                                                    a.btn-social.btn-outline(href='#')
@@ -112,7 +113,7 @@ html
                                                        i.fa.fa-fw.fa-dribbble
                                        .footer-col.col-md-4
 
-                                           p
+                                           h7(style='color:black',font-style:'italic')
                                                 Site Crée par des étudiants d'ingesup
 
                            .footer-below
