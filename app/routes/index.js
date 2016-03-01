@@ -17,5 +17,8 @@ router.get('/service',function(req,res,next){
 router.get('/propos',function(req,res,next){
   res.render('propos', { title: 'Inscription' });
 });
+router.get('/Accueil',function(req,res){
+  res.render('PageAccueil',{ title: 'Bienvenue sur Notre site' });
+})
 module.exports = router;
 
