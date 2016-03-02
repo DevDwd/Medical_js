@@ -1,18 +1,48 @@
 html
     head
         meta(charset='utf-8')
-        Title A propos
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='')
+        meta(name='author', content='')
         include links.jade
-    body
-        nav.navbar.navbar-default.navbar-fixed-top
-            nav.navbar.navbar-light(style='background-color: #e3f2fd;')
-                .container
-                     .header
-                        .row
+        title Medecine generale
+        link(rel='shortcut icon' ,type='image/png', href='/images/logo.png')
 
-                    ss Le Centre hospitalier Laval est un établissement qui fait partie d'un GIE(Groupement d'interet econmique)
-                    P
-                    tt L'un des premiers buts de ce centre est de venir en aide aux patients dont les revenus ne leur permettent pas de
-                    st de se prendre entièrement en charge.
+        // Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/
+        link(href='css/bootstrap.min.css', rel='stylesheet')
+        // Custom CSS
+        link(href='css/freelancer.css', rel='stylesheet')
+        // Custom Fonts
+        link(href='font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+
+    body#page-top.index
+        // Navigation
+        nav.navbar.navbar-default.navbar-fixed-top(style ='background-color:#1c5680;')
+            .container
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header.page-scroll
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='#page-top',style='color:white') Centre Hospitalier de Laval
+                // Collect the nav links, forms, and other content for toggling
+                #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-center
+                        li.hidden
+                            a(href='#page-top')
+                        li.page-scroll
+                            a(href='/Accueil',style='color:white')  Accueil
+                        li.page-scroll
+                            a(href='/Inscription',style='color:white')  Inscription
+                        li.page-scroll
+                            a(href='/propos',style='color:white') A propos de Nous
+                        li.page-scroll
+                            a(href='/service',style='color:white') Nos Services
+
 
 

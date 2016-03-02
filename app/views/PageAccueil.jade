@@ -18,7 +18,8 @@ html
         link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', rel='stylesheet', type='text/css')
 
-    body#page-top.index
+    body#page-top.index(style='overflow-y:scroll;height:200px;width:100px;')
+
         // Navigation
         nav.navbar.navbar-default.navbar-fixed-top(style ='background-color:#1c5680;')
             .container
@@ -36,13 +37,13 @@ html
                         li.hidden
                             a(href='#page-top')
                         li.page-scroll
-                            a(href='/Accueil',style='color:white')  Accueil
+                            a(href='/Accueil',style='color:white;font-weight:bold')  Accueil
                         li.page-scroll
-                              a(href='/Inscription',style='color:white')  Inscription
+                              a(href='/Inscription',style='color:white;font-weight:bold')  Inscription
                         li.page-scroll
-                            a(href='/propos',style='color:white') A propos de Nous
+                            a(href='/propos',style='color:white;font-weight:bold') A propos de Nous
                         li.page-scroll
-                            a(href='/service',style='color:white') Nos Services &nbsp;&nbsp;&nbsp;&nbsp;
+                            a(href='/service',style='color:white;font-weight:bold') Nos Services &nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
@@ -61,7 +62,7 @@ html
                                 &nbsp;
                                 &nbsp;
                                 &nbsp;
-                                
+
                         li.form.form-inline.pull-xs-right
                             input.form-control(type='text', placeholder='Search',size='20*20')
                             button.btn.btn-success-outline(type='submit',style='color:blue') Search
@@ -76,7 +77,7 @@ html
                     .intro-text
                         span.name
                         hr.star-light
-                        span.skills La Prise en charge - des patients - est notre priorité
+                        P(style='color:black;font-style:oblique;font-weight:bold') La Prise en charge - des patients - est notre priorité
              .row
                  .col-lg-20
                     img.img-responsive(src='/images/pageServiceUrgence.jpg', alt='')
@@ -104,7 +105,7 @@ html
                                    .row
                                        .footer-col.col-md-4
                                            h6
-                                               p(font-style='italic',style='color:black')
+                                               p(style='color:black;font-weihgt:bold')
                                                    | Location
                                                    br
                                                    | 130, rue Lafayette
@@ -114,12 +115,12 @@ html
                                                P
                                                    | Adresse Mail:
                                                    br
-                                                   a(href='mailto:webmaster@example.com',style='color:black',font-style='italic')  contact@centrehospitalierlaval.com
+                                                   a(href='mailto:webmaster@example.com',style='color:black;font-style:italic;font-weight:bold')  contact@centrehospitalierlaval.com
                                                    | .
 
 
                                        .footer-col.col-md-4
-                                           h3(style='color:black') Vous pourrez aussi nous suivre sur
+                                           h3(style='color:black;font-weight:bold;') Vous pourrez aussi nous suivre sur
                                            ul.list-inline
                                                li
                                                    a.btn-social.btn-outline(href='#')
@@ -138,7 +139,7 @@ html
                                                        i.fa.fa-fw.fa-dribbble
                                        .footer-col.col-md-4
 
-                                           h7(style='color:black',font-style:'italic')
+                                           h7(style='color:black;font-weight:bold')
                                                 Site Crée par des étudiants d'ingesup
 
                            .footer-below
