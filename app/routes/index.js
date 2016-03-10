@@ -23,5 +23,8 @@ router.get('/Accueil',function(req,res){
 router.get('/liste',function(req,res){
   res.render('Liste',{ title: 'liste des medcins' });
 })
+router.get('/connection',function(req,res){
+  res.render('connection',{ title: 'Connection' });
+})
 module.exports = router;
 
