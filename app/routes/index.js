@@ -20,8 +20,8 @@ router.get('/propos',function(req,res,next){
 router.get('/Accueil',function(req,res){
   res.render('PageAccueil',{ title: 'Bienvenue sur Notre site' });
 })
-router.get('/liste',function(req,res){
-  res.render('Liste',{ title: 'liste des medcins' });
+router.get('/personnels',function(req,res){
+  res.render('personnel',{ title: 'liste des medecins' });
 })
 module.exports = router;
 

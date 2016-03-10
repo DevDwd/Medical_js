@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	h1.
+		Listes des personnels :
+
+	table
+		thead
+			a(href="/addRoute") Ajouter une route
+			tr
+				th lien
+				th type
+				th Nom
+				th Longueur
+				th Ville de départ
+				th Ville d'arriver
+				th supprimer
+				th modifier
+		tbody 
+		each in routeliste
+			tr
+				td
+					a(href="/route/#{route._id}") voir
+				td  #{route.type}
+				td  #{route.name}
+				td  #{route.longueur} 
+				td  #{route.ville_depart} 
+				td  #{route.ville_arrivé}
+				td
+					a(href="/delete/#{route._id}") supprimer
+				td
+					a(href="/route/#{route._id}") modifier
