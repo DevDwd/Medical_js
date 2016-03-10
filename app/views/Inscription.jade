@@ -6,29 +6,7 @@ html
     body(style='overflow-y: scroll;')
         .container
             .row
-                nav.navbar.navbar-default.navbar-fixed-top(style ='background-color:#1c5680')
-                    .container
-                        // Brand and toggle get grouped for better mobile display
-                        .navbar-header.page-scroll
-                            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                                span.sr-only Toggle navigation
-                                span.icon-bar
-                                span.icon-bar
-                                span.icon-bar
-                            a.navbar-brand(href='#page-top',style='color:white') Centre Hospitalier de Laval
-                        // Collect the nav links, forms, and other content for toggling
-                        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                            ul.nav.navbar-nav.navbar-center
-                                li.hidden
-                                    a(href='#page-top')
-                                li.page-scroll
-                                    a(href='/Accueil',style='color:white')  Accueil
-                                li.page-scroll
-                                    a(href='/Inscription',style='color:white')  Inscription
-                                li.page-scroll
-                                    a(href='/propos',style='color:white') A propos de Nous
-                                li.page-scroll
-                                    a(href='/service',style='color:white') Nos Services
+                include menu.jade
             .row
                 .col-lg-12.text-center
                     h2 Inscrivez-vous
@@ -45,8 +23,8 @@ html
                                 p.help-block.text-danger
                         .row.control-group
                             .form-group.col-xs-12.floating-label-form-group.controls
-                                label Adresse Professionnelle
-                                input#email.form-control(type='email', placeholder=' Addresse Professionnelle', required='', data-validation-required-message='Please enter your email address.')
+                                label Prenom
+                                input#prenom.form-control(type='email', placeholder=' Prenom', required='', data-validation-required-message='Please enter your email address.')
                                 p.help-block.text-danger
                         .row.control-group
                             .form-group.col-xs-12.floating-label-form-group.controls
@@ -63,74 +41,4 @@ html
                         .row
                             .form-group.col-xs-12
                                 button.btn.btn-success.btn-lg(type='submit') Envoyer
-
-
-    nav.navbar.navbar-default.navbar-fixed-bottom
-        .container
-            // Brand and toggle get grouped for better mobile display
-            .navbar-header.page-scroll
-                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-
-            // Collect the nav links, forms, and other content for toggling
-            #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                nav.navbar-nav.navbar-center
-
-
-                    footer.text-center
-                        .footer-above
-                            .container
-
-                                .row
-                                    .footer-col.col-md-4
-                                        h6
-                                            p(font-style='italic',style='color:black')
-                                                | Location
-                                                br
-                                                | 130, rue Lafayette
-                                                br
-                                                | 75010 Paris
-                                            h7
-                                            P
-                                                | Adresse Mail:
-                                                br
-                                                a(href='mailto:webmaster@example.com',style='color:black',font-style='italic')  contact@centrehospitalierlaval.com
-                                                | .
-
-
-                                    .footer-col.col-md-4
-                                        h3(style='color:black') Vous pourrez aussi nous suivre sur
-                                        ul.list-inline
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-facebook
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-google-plus
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-twitter
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-linkedin
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-dribbble
-                                    .footer-col.col-md-4
-
-                                        h7(style='color:black',font-style:'italic')
-                                            Site Crée par des étudiants d'ingesup
-
-                        .footer-below
-                            .container
-                                .row
-                                    .col-lg-12
-                                        | Copyright © Your Website 2016
-                    // Scroll to Top Button (Only visible on small and extra-small screen sizes)
-                    .scroll-top.page-scroll.hidden-sm.hidden-xs.hidden-lg.hidden-md
-                        a.btn.btn-primary(href='#page-top')
-                            i.fa.fa-chevron-up
 
