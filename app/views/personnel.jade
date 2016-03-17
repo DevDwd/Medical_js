@@ -1,32 +1,40 @@
-extends layout
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(name='description', content='')
+		meta(name='author', content='')
+		include links.jade
+		title Medecine generale
+		link(rel='shortcut icon' ,type='image/png', href='/images/logo.png')
+		link(rel='stylesheet', href='/stylesheets/style.css')
 
-block content
-	h1.
-		Listes des personnels :
+		
 
-	table
-		thead
-			a(href="/addRoute") Ajouter une route
-			tr
-				th lien
-				th type
-				th Nom
-				th Longueur
-				th Ville de départ
-				th Ville d'arriver
-				th supprimer
-				th modifier
-		tbody 
-		each in routeliste
-			tr
-				td
-					a(href="/route/#{route._id}") voir
-				td  #{route.type}
-				td  #{route.name}
-				td  #{route.longueur} 
-				td  #{route.ville_depart} 
-				td  #{route.ville_arrivé}
-				td
-					a(href="/delete/#{route._id}") supprimer
-				td
-					a(href="/route/#{route._id}") modifier
+
+		include menu.jade
+		br
+		br
+		br
+		body
+
+		block content
+			h1 Listes des personne :
+			table.table-hover
+				thead
+					tr
+						th Nom
+						th Prenom
+						th profession
+						th service
+						th tel
+						
+				tbody 
+				each personnel, i in users
+					tr
+						td  #{personnel.name}
+						td  #{personnel.prenom}
+						td  #{personnel.profession}
+						td  #{personnel.service}  
+						td  #{personnel.number} 

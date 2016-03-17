@@ -6,3 +6,19 @@ body {
 a {
   color: #00B7FF;
 }
+
+h1 {
+    font-size: 36px;
+    margin-left: 12px;
+    margin-top: 10px;
+    width: 1200px !important
+}
+
+td{
+    padding: 2px;
+
+    border: 3px ridge #eee;
+
+}
+
+
