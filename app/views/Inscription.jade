@@ -1,0 +1,71 @@
+html
+    head
+        meta(charset='utf-8')
+        Title Inscription  Sur notre Site
+        include links.jade
+    body(style='overflow-y: scroll;')
+        .container
+            .row
+                include menu.jade
+            .row
+                .col-lg-12.text-center
+                    h2 Inscrivez-vous
+                    hr.star-primary
+            .row
+                .col-lg-8.col-lg-offset-2
+                    // To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
+                    // The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
+                    form#formaddpersonnel(name="Inscription",method="post",action="/Inscription")
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Nom*
+                                input#name.form-control(type='text', placeholder='Nom', required='', data-validation-required-message='Please enter your name.', name='name')
+                                p.help-block.text-danger
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Prenom*
+                                input#prenom.form-control(type='text', placeholder=' Prenom', required='', data-validation-required-message='Please enter your email address.', name='prenom')
+                                p.help-block.text-danger
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Numero de Mobile*
+                                input#phone.form-control(type='tel', placeholder='Numero de Mobile', required='', data-validation-required-message='Please enter your phone number.' , name='number')
+                                p.help-block.text-danger
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Profession*
+                                textarea#message.form-control(type='prof', placeholder='Profession', required='', data-validation-required-message='Please enter a profession.', name='profession')
+                                p.help-block.text-danger
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Service*
+                                textarea#text.form-control(type='prof', placeholder='service ', required='', data-validation-required-message='Please enter a profession.', name='service')
+                                p.help-block.text-danger
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Mot de passe *
+                                input#password.form-control(type='password', placeholder=' password....', required='', name='password')
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Confirmation mot de passe*
+                                input#confirm_password.form-control(type='password', placeholder='....', required='')
+                        br
+                        #success
+                        .row
+                            .form-group.col-xs-12
+                                button.btn.btn-success.btn-lg(type='submit') Envoyer
+
+                        script(type='text/javascript').
+                            var password = document.getElementById("password")
+                            , confirm_password = document.getElementById("confirm_password");
+                            function validatePassword(){
+                            if(password.value != confirm_password.value) {
+                            confirm_password.setCustomValidity("Les mots de passe ne correspondent pas.");
+                            } else {
+                            confirm_password.setCustomValidity('');
+                            }
+                            }
+                            password.onchange = validatePassword;
+                            confirm_password.onkeyup = validatePassword;
+
+

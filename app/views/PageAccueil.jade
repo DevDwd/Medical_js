@@ -1,0 +1,124 @@
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        include links.jade
+        title Medecine generale
+        link(rel='shortcut icon' ,type='image/png', href='/images/logo.png')
+
+        // Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/
+        link(href='css/bootstrap.min.css', rel='stylesheet')
+        // Custom CSS
+        link(href='css/freelancer.css', rel='stylesheet')
+        // Custom Fonts
+        link(href='font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+
+    body#page-top.index(style='overflow-y:scroll;height:200px;width:100px;')
+
+        include menu.jade 
+                              
+
+                        li.form.form-inline.pull-xs-right
+                            input.form-control(type='text', placeholder='Search',size='20*20')
+                            button.btn.btn-success-outline(type='submit',style='color:blue') Search
+                    ul.nav.navbar-nav.navbar-center
+                        background-color:#229922
+
+    header
+        .container
+            .row
+                .col-lg-20
+                    img.img-responsive(src='/images/hypnose-medicale-accueil.jpg', alt='')
+                    .intro-text
+                        span.name
+                        hr.star-light
+                        P(style='color:black;font-style:oblique;font-weight:bold') La Prise en charge - des patients - est notre priorité
+             .row
+                 .col-lg-20
+                    img.img-responsive(src='/images/pageServiceUrgence.jpg', alt='')
+
+
+    nav.navbar.navbar-default.navbar-fixed-bottom(style='background:#E6E6FA;')
+        .container
+            // Brand and toggle get grouped for better mobile display
+            .navbar-header.page-scroll
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+
+            // Collect the nav links, forms, and other content for toggling
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                nav.navbar-nav.navbar-center
+
+
+                       footer.text-center
+                           .footer-above
+                               .container
+
+                                   .row
+                                       .footer-col.col-md-4
+                                           h6
+                                               p(style='color:black;font-weihgt:bold')
+                                                   | Location
+                                                   br
+                                                   | 130, rue Lafayette
+                                                   br
+                                                   | 75010 Paris
+                                               h7
+                                               P
+                                                   | Adresse Mail:
+                                                   br
+                                                   a(href='mailto:webmaster@example.com',style='color:black;font-style:italic;font-weight:bold')  contact@centrehospitalierlaval.com
+                                                   | .
+
+
+                                       .footer-col.col-md-4
+                                           h3(style='color:black;font-weight:bold;') Vous pourrez aussi nous suivre sur
+                                           ul.list-inline
+                                               li
+                                                   a.btn-social.btn-outline(href='#')
+                                                       i.fa.fa-fw.fa-facebook
+                                               li
+                                                   a.btn-social.btn-outline(href='#')
+                                                       i.fa.fa-fw.fa-google-plus
+                                               li
+                                                   a.btn-social.btn-outline(href='#')
+                                                       i.fa.fa-fw.fa-twitter
+                                               li
+                                                   a.btn-social.btn-outline(href='#')
+                                                       i.fa.fa-fw.fa-linkedin
+                                               li
+                                                   a.btn-social.btn-outline(href='#')
+                                                       i.fa.fa-fw.fa-dribbble
+                                       .footer-col.col-md-4
+
+                                           h7(style='color:black;font-weight:bold')
+                                                Site Crée par des étudiants d'ingesup
+
+                           .footer-below
+                               .container
+                                   .row
+                                       .col-lg-12
+                                           | Copyright © Your Website 2016
+                       // Scroll to Top Button (Only visible on small and extra-small screen sizes)
+                       .scroll-top.page-scroll.hidden-sm.hidden-xs.hidden-lg.hidden-md
+                           a.btn.btn-primary(href='#page-top')
+                               i.fa.fa-chevron-up
+
+
+
+
+
+
+
+
+
+
+
