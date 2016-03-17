@@ -1,25 +1,30 @@
-// Navigation
-nav.navbar.navbar-default.navbar-fixed-top(style ='background-color:#1c5680;')
-    // Brand and toggle get grouped for better mobile display
-    .navbar-header.page-scroll
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        a.navbar-brand(href='#page-top',style='color:white') Centre Hospitalier de Laval
-    // Collect the nav links, forms, and other content for toggling
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        ul.nav.navbar-nav.navbar-center
-            li.hidden
-                a(href='#page-top')
-            li.page-scroll
-                a(href='/Accueil',style='color:white')  Accueil
-            li.page-scroll
-                a(href='/Inscription',style='color:white')  Inscription
-            li.page-scroll
-                a(href='/propos',style='color:white') A propos de Nous
-            li.page-scroll
-                a(href='/service',style='color:white') Nos Services
-            li.page-scroll
-                a(href='/personnels',style='color:white') Nos Personnels   
+
+body#page-top.index
+    // Navigation
+    nav.navbar.navbar-default.navbar-fixed-top(style ='background-color:#1c5680;')
+        .container
+            // Brand and toggle get grouped for better mobile display
+            .navbar-header.page-scroll
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='#page-top',style='color:white') Centre Hospitalier de Laval
+            // Collect the nav links, forms, and other content for toggling
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar-center
+                    li.hidden
+                        a(href='#page-top')
+                    li.page-scroll
+                        a(href='/Accueil',style='color:white')  Accueil
+                    li.page-scroll
+                        a(href='/Inscription',style='color:white')  Inscription
+                    li.page-scroll
+                        a(href='/propos',style='color:white') A propos de Nous
+                    li.page-scroll
+                        a(href='/service',style='color:white') Nos Services
+                    li.page-scroll
+                        a(href='/connection',style='color:white') Connection
+                    li.page-scroll
+                        a(href='/personnels',style='color:white') Nos Personnels   

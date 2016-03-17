@@ -22,8 +22,6 @@ router.get('/Accueil',function(req,res){
 })
 
 
-
-
 router.get('/personnels', function(req, res){
 
 	var db = req.db;
@@ -65,6 +63,12 @@ router.post("/Inscription", function(req, res){
 
 
 
+router.get('/personnels',function(req,res){
+  res.render('personnel',{ title: 'liste des medecins' });
+})
+router.get('/connection',function(req,res){
+  res.render('connection',{ title: 'Connection' });
+})
 
 module.exports = router;
 
