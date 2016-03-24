@@ -1,0 +1,34 @@
+html
+    head
+        meta(charset='utf-8')
+        Title Inscription  Sur notre Site
+        include links.jade
+    body(style='overflow-y: scroll;')
+        .container
+            .row
+                include menu.jade
+            .row
+                .col-lg-12.text-center
+                    h2 Inscrivez-vous
+                    hr.star-primary
+            .row
+                .col-lg-8.col-lg-offset-2
+                    // To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
+                    // The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
+                    form#contactForm(name='sentMessage', novalidate='')
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Email
+                                input#name.form-control(type='email', placeholder='Email', required='', data-validation-required-message='Entrez votre adresse email ici.')
+                                p.help-block.text-danger
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Mot de passe
+                                input#phone.form-control(type='password', placeholder='Mot de passe', required='', data-validation-required-message='Please enter your phone number.')
+                                p.help-block.text-danger
+                        br
+                        #success
+                        .row
+                            .form-group.col-xs-12
+                                button.btn.btn-success.btn-lg(type='submit') Envoyer
+
