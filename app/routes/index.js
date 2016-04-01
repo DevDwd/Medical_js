@@ -20,5 +20,8 @@ router.get('/propos',function(req,res,next){
 router.get('/Accueil',function(req,res){
   res.render('PageAccueil',{ title: 'Bienvenue sur Notre site' });
 })
+router.get('/admin',function(req,res){
+  res.render('/AdminPage',{title:'Back-end'})
+})
 module.exports = router;
 
