@@ -6,29 +6,7 @@ html
     body(style='overflow-y: scroll;')
         .container
             .row
-                nav.navbar.navbar-default.navbar-fixed-top(style ='background-color:#1c5680')
-                    .container
-                        // Brand and toggle get grouped for better mobile display
-                        .navbar-header.page-scroll
-                            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                                span.sr-only Toggle navigation
-                                span.icon-bar
-                                span.icon-bar
-                                span.icon-bar
-                            a.navbar-brand(href='#page-top',style='color:white') Centre Hospitalier de Laval
-                        // Collect the nav links, forms, and other content for toggling
-                        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                            ul.nav.navbar-nav.navbar-center
-                                li.hidden
-                                    a(href='#page-top')
-                                li.page-scroll
-                                    a(href='/Accueil',style='color:white')  Accueil
-                                li.page-scroll
-                                    a(href='/Inscription',style='color:white')  Inscription
-                                li.page-scroll
-                                    a(href='/propos',style='color:white') A propos de Nous
-                                li.page-scroll
-                                    a(href='/service',style='color:white') Nos Services
+                include menu.jade
             .row
                 .col-lg-12.text-center
                     h2 Inscrivez-vous
@@ -37,100 +15,57 @@ html
                 .col-lg-8.col-lg-offset-2
                     // To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
                     // The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
-                    form#contactForm(name='sentMessage', novalidate='')
+                    form#formaddpersonnel(name="Inscription",method="post",action="/Inscription")
                         .row.control-group
                             .form-group.col-xs-12.floating-label-form-group.controls
-                                label Nom
-                                input#name.form-control(type='text', placeholder='Nom', required='', data-validation-required-message='Please enter your name.')
+                                label Nom*
+                                input#name.form-control(type='text', placeholder='Nom', required='', data-validation-required-message='Please enter your name.', name='name')
                                 p.help-block.text-danger
                         .row.control-group
                             .form-group.col-xs-12.floating-label-form-group.controls
-                                label Adresse Professionnelle
-                                input#email.form-control(type='email', placeholder=' Addresse Professionnelle', required='', data-validation-required-message='Please enter your email address.')
+                                label Prenom*
+                                input#prenom.form-control(type='text', placeholder=' Prenom', required='', data-validation-required-message='Please enter your email address.', name='prenom')
                                 p.help-block.text-danger
                         .row.control-group
                             .form-group.col-xs-12.floating-label-form-group.controls
-                                label Numero de Mobile
-                                input#phone.form-control(type='tel', placeholder='Numero de Mobile', required='', data-validation-required-message='Please enter your phone number.')
+                                label Numero de Mobile*
+                                input#phone.form-control(type='tel', placeholder='Numero de Mobile', required='', data-validation-required-message='Please enter your phone number.' , name='number')
                                 p.help-block.text-danger
                         .row.control-group
                             .form-group.col-xs-12.floating-label-form-group.controls
-                                label Profession
-                                textarea#message.form-control(type='prof', placeholder='Profession', required='', data-validation-required-message='Please enter a profession.')
+                                label Profession*
+                                textarea#message.form-control(type='prof', placeholder='Profession', required='', data-validation-required-message='Please enter a profession.', name='profession')
                                 p.help-block.text-danger
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Service*
+                                textarea#text.form-control(type='prof', placeholder='service ', required='', data-validation-required-message='Please enter a profession.', name='service')
+                                p.help-block.text-danger
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Mot de passe *
+                                input#password.form-control(type='password', placeholder=' password....', required='', name='password')
+                        .row.control-group
+                            .form-group.col-xs-12.floating-label-form-group.controls
+                                label Confirmation mot de passe*
+                                input#confirm_password.form-control(type='password', placeholder='....', required='')
                         br
                         #success
                         .row
                             .form-group.col-xs-12
                                 button.btn.btn-success.btn-lg(type='submit') Envoyer
 
+                        script(type='text/javascript').
+                            var password = document.getElementById("password")
+                            , confirm_password = document.getElementById("confirm_password");
+                            function validatePassword(){
+                            if(password.value != confirm_password.value) {
+                            confirm_password.setCustomValidity("Les mots de passe ne correspondent pas.");
+                            } else {
+                            confirm_password.setCustomValidity('');
+                            }
+                            }
+                            password.onchange = validatePassword;
+                            confirm_password.onkeyup = validatePassword;
 
-    nav.navbar.navbar-default.navbar-fixed-bottom
-        .container
-            // Brand and toggle get grouped for better mobile display
-            .navbar-header.page-scroll
-                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-
-            // Collect the nav links, forms, and other content for toggling
-            #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                nav.navbar-nav.navbar-center
-
-
-                    footer.text-center
-                        .footer-above
-                            .container
-
-                                .row
-                                    .footer-col.col-md-4
-                                        h6
-                                            p(font-style='italic',style='color:black')
-                                                | Location
-                                                br
-                                                | 130, rue Lafayette
-                                                br
-                                                | 75010 Paris
-                                            h7
-                                            P
-                                                | Adresse Mail:
-                                                br
-                                                a(href='mailto:webmaster@example.com',style='color:black',font-style='italic')  contact@centrehospitalierlaval.com
-                                                | .
-
-
-                                    .footer-col.col-md-4
-                                        h3(style='color:black') Vous pourrez aussi nous suivre sur
-                                        ul.list-inline
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-facebook
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-google-plus
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-twitter
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-linkedin
-                                            li
-                                                a.btn-social.btn-outline(href='#')
-                                                    i.fa.fa-fw.fa-dribbble
-                                    .footer-col.col-md-4
-
-                                        h7(style='color:black',font-style:'italic')
-                                            Site Crée par des étudiants d'ingesup
-
-                        .footer-below
-                            .container
-                                .row
-                                    .col-lg-12
-                                        | Copyright © Your Website 2016
-                    // Scroll to Top Button (Only visible on small and extra-small screen sizes)
-                    .scroll-top.page-scroll.hidden-sm.hidden-xs.hidden-lg.hidden-md
-                        a.btn.btn-primary(href='#page-top')
-                            i.fa.fa-chevron-up
 
