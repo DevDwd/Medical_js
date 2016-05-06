@@ -1,0 +1,33 @@
+
+.notification-preview{
+  max-height: 400px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+   background: #2a2f38;
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  bottom: 100%;
+  width: 375px;
+  z-index: 7;
+  cursor: default;
+}
+
+#preview{
+	overflow: auto;
+	max-height: 200px;
+}
+.notification-preview li {
+  border-top: 1px solid #20242b;
+  padding: 21px 0 18px;
+  color: black;
+}
+
+.user-message-row p{
+	border-color: blue;
+}
+.msg-fixed{
+	position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+}
