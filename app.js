@@ -5,6 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
+
+  var io = require('socket.io');
+  
+
+
+
+
+
+
 var routes = require('./app/routes/index');
 var users = require('./app/routes/users');
 
@@ -65,5 +75,8 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 })
+
+
+
 
 module.exports = app;
