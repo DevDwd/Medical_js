@@ -37,6 +37,7 @@ router.get('/personnels', function(req, res){
 router.post("/Inscription", function(req, res){
 	var db = req.db;
 	var name = req.body.name;
+	
 	var prenom = req.body.prenom;
 	var number = req.body.number;
 	var profession = req.body.profession;
@@ -52,14 +53,13 @@ router.post("/Inscription", function(req, res){
 		"password" : password,
 	}, function(err, doc){
 		if(err){
+
 			res.send("Erreur insertion dans la base de données");
 		}else{
-			res.redirect("personnels");
+			res.redirect("msg");
 		}
 	});
 });
-
-
 
 
 
@@ -69,6 +69,24 @@ router.get('/personnels',function(req,res){
 router.get('/connection',function(req,res){
   res.render('connection',{ title: 'Connection' });
 })
+
+
+/* GET message  page. */
+router.get('/msg', function(req, res, next) {
+  res.render('message', { title: 'Message' });
+});
+
+
+/* Post message  page. */
+router.post('/msg', function(req, res, next) {
+
+  res.render('message', { title: 'Message' });
+});
+
+
+
+
+
 
 module.exports = router;
 
