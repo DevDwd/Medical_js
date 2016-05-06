@@ -3,5 +3,20 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    link(rel='stylesheet', href='/stylesheets/msg_code.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='shortcut icon' ,type='image/png', href='/images/logo.png')
+  body(background='http://wallpapercave.com/wp/xPlUiin.jpg' style="width:1200px;")
+        div.container
+            div.row
+                h1.text-center.ht Poser vos question
+            div.row
+                div.col-sm-8
+                    block content
+                div.col-sm-4
+                    block message
+        include ./footer.jade
+        script(src='/javascripts/jquery.min.js')
+        script(src='/javascripts/bootstrap.js')
+        script(src='http://localhost:3000/socket.io/socket.io.js')
+        script(src='/javascripts/msg_code.js')

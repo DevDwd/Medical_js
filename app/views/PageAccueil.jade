@@ -7,7 +7,7 @@ html
         meta(name='author', content='')
         include links.jade
         title Medecine generale
-        link(rel='shortcut icon' ,type='image/png', href='/images/logo.png')
+        
 
         // Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/
         link(href='css/bootstrap.min.css', rel='stylesheet')
@@ -17,15 +17,13 @@ html
         link(href='font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
 
-    body#page-top.index(style='overflow-y:scroll;height:200px;width:100px;')
 
         include menu.jade 
                               
 
-                        li.form.form-inline.pull-xs-right
-                            input.form-control(type='text', placeholder='Search',size='20*20')
-                            button.btn.btn-success-outline(type='submit',style='color:blue') Search
+                        
                     ul.nav.navbar-nav.navbar-center
                         background-color:#229922
 
@@ -33,11 +31,13 @@ html
         .container
             .row
                 .col-lg-20
-                    img.img-responsive(src='/images/hypnose-medicale-accueil.jpg', alt='')
+                    img.img-responsivez(src='http://www.ledocteur.fr/qa-theme/Pixel/img/Slider_V3.jpg', alt='')
                     .intro-text
                         span.name
                         hr.star-light
-                        P(style='color:black;font-style:oblique;font-weight:bold') La Prise en charge - des patients - est notre priorité
+                        P(style='color: black; font-weight: bold; text-align: center; font-size: 15px;') POSEZ VOTRE QUESTION HOMÉOPATHIE
+                        P(style='color: black; font-weight: bold; text-align: center; font-size: 15px;') 7Jour/7 
+                       
              .row
                  .col-lg-20
                     img.img-responsive(src='/images/pageServiceUrgence.jpg', alt='')
@@ -111,14 +111,3 @@ html
                        .scroll-top.page-scroll.hidden-sm.hidden-xs.hidden-lg.hidden-md
                            a.btn.btn-primary(href='#page-top')
                                i.fa.fa-chevron-up
-
-
-
-
-
-
-
-
-
-
-
