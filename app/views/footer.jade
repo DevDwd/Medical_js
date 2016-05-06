@@ -1,0 +1,14 @@
+div(class="msg-fixed")
+    div(class="dropup pull-right ")
+        button(type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+            span.badge messagerie
+            span.caret
+        ul(class="dropdown-menu notification-preview" id="msg_popup")
+            li(id="form-in-li")
+                div
+                    form(name="new-message-2", class="form-horizontal")
+                        div.input
+                            textarea(name="description", rows="2", id="msg-content-2", class="form-control")
+                        div.actions
+                            input(type="submit", value="send", id="msg-submit-2", class="btn btn-default")
+

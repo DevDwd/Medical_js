@@ -1,0 +1,23 @@
+extends layout
+link(rel='stylesheet', href='/stylesheets/style.css')
+block message
+    include menu.jade
+    div.sidebar-right
+        div.content
+            table.table.table-striped
+                thead
+                    tr
+                        th Nom
+                        th Etat
+                tbody#message-row
+
+        h4 conversation
+        #preview
+        #user_in_talk
+        div.row
+            form(name="new-message", class="form-horizontal")
+                div.input
+                    textarea(name="description", rows="3", id="msg-content", class="form-control")
+                div.actions
+                    br
+                    input(type="submit", value="send", id="msg-submit", class="btn btn-success")
