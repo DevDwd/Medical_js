@@ -89,6 +89,25 @@ router.post('/msg', function(req, res, next) {
 });
 
 
+router.post('/login', function(req, res) {
+
+	var name = req.body.name;
+	var password = req.body.password;
+
+	User.findOne({name: name, password: password}, function(err, user) {
+		if (err) {
+			return res.status(500).send();
+		}
+		if (!user) {
+			return res.status(404).send();
+		}
+
+		return res.status(200).send();
+	})
+
+});
+
+
 
 
 
