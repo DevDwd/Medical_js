@@ -22,3 +22,29 @@ td{
 }
 
 
+.img-responsivez {
+    margin-left: 180px;
+    margin-top: 43px;
+    padding: 10px;
+    width: 800px;
+     border: 8px solid #eee;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px 1px #bbb;
+}
+
+.fa.fa-user-md {
+    font-size: 25px;
+    line-height: 15px;
+}
+
+h1.ht{ 
+	 color: #111;
+    font-family: "HelveticaNeue-Light";
+    font-size: 29px;
+    font-weight: 100;
+    margin-left: 85px;
+    text-transform: full-width;
+
+
+ }
+
