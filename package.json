@@ -11,8 +11,11 @@
     "debug": "~2.2.0",
     "express": "~4.13.1",
     "jade": "~1.11.0",
+    "mongodb": "*",
+    "monk": "*",
     "morgan": "~1.6.1",
     "nodemon": "^1.9.1",
+<<<<<<< HEAD
     "serve-favicon": "~2.3.0",
     "mongodb":"~2.0.33",
     "monk":"~1.0.1",
@@ -24,5 +27,8 @@
     "gulp-less": "^3.0.5",
     "gulp-minify-css": "^1.2.4",
     "gulp-recess": "^1.2.0"
+=======
+    "serve-favicon": "~2.3.0"
+>>>>>>> 4859844d913b4b3132631dd97f0e530869e8ac42
   }
 }

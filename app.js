@@ -20,16 +20,16 @@ var users = require('./app/routes/users');
 
 var app = express();
 
-var mongo = require('mongodb');
-var monk  = require('monk');
-var db = monk('localhost:27017/Medicalbdd');
+//var mongo = require('mongodb');
+//var monk  = require('monk');
+//var db = monk('localhost:27017/Medicalbdd');
 
 //Make our db accessible to our router
-app.use(function(req, res, next){
+/*app.use(function(req, res, next){
 
   req.db=db;
   next();
-});
+});*/
 // view engine setup
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'jade');
