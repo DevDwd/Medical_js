@@ -15,11 +15,11 @@ html
                 .col-lg-8.col-lg-offset-2
                     // To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.
                     // The form should work on most web servers, but if the form is not working you may need to configure your web server differently.
-                    form#contactForm(name='sentMessage', novalidate='')
+                    form#formaddpersonnel(name="Inscription",method="post",action="/login")
                         .row.control-group
                             .form-group.col-xs-12.floating-label-form-group.controls
-                                label Email
-                                input#name.form-control(type='email', placeholder='Email', required='', data-validation-required-message='Entrez votre adresse email ici.')
+                                label Pseudo
+                                input#name.form-control(type='text', placeholder='Email', required='', data-validation-required-message='Entrez votre adresse email ici.')
                                 p.help-block.text-danger
                         .row.control-group
                             .form-group.col-xs-12.floating-label-form-group.controls
